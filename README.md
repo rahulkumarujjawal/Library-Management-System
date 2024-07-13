@@ -12,8 +12,6 @@ MySQL used as a Java persistence store
 Project Lombok Reduces the time of writing java boiler plate code.
 Using Library Management System
 CLI-->
-
-git clone https://github.com/saikat021/Library-Management-System.git
 cd Library-Management-System
 mvn package 
 java -jar target/Student-library-0.0.1-SNAPSHOT.jar
