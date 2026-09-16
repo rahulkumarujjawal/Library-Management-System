@@ -1,4 +1,23 @@
-# Library-Management-System
+# 📚 Library Management System
+
+> 🚀 A Java + Spring Boot based Library Management System for managing students, books, authors, library cards, transactions, authentication and book issue/return operations.
+
+## 🎯 Overview
+
+A real-world **College Library Management System** built using **Java, Spring Boot, Spring Security, Spring Data JPA, Hibernate and MySQL**.
+Students can register, issue and return books, while administrators can manage students, books, authors and transactions.
+
+🏗️ **Architecture:** Monolithic Architecture  
+🌐 **API Style:** REST APIs  
+🗄️ **Database:** MySQL
+
+---
+## 🛠️ Technologies Used
+
+☕ Java | 🚀 Spring Boot | 🔐 Spring Security  
+🌱 Spring Data JPA | 💤 Hibernate | 🐬 MySQL  
+📦 Maven | ✨ Lombok | 🧪 Postman
+
 
 Introduction
 A Library Management System designed to see the books available in a college library. It allows students to register as a user and issue/return books from the college library hassle free. The backend is designed as a Monolithic Architecture with various nuances as discussed below.
@@ -22,6 +41,10 @@ run SpringBootApplication
 Backend Design
 Entities
 Actors/Entities are inspired by the real world entities that can use the applications
+
+
+
+
 
 Student having attributes:
 unique primary key student_id, country, emailId, name, age, card_id(foreign key)
@@ -63,6 +86,7 @@ https://localhost:8080/issueBook?bookId=_&cardId=_ goes through the following op
 
 Check if card is Activated?
 Check if the book is available?
+
 Check if the number of books issued with the requested card has gone past the maximum limit of number of books to be issued. Operations :-->
 Book status marked unavailable in the Book table.
 Book is mapped to a card
@@ -81,6 +105,9 @@ Various transaction entries in the table:
 Security (Checkout Branch Security)
 Spring Security is used for Authentication and Authorization. For every API call it is checked whether the calling entity has cookies that make it a valid entity in the system and the Username(emailId in the student table) is the same as the details of whichever entity is changed by hitting a CRUD API regarding that table.
 
+
+
+
 Few Examples: Each example API preceeded by "http://localhost:8080"
 
 /student/all--> gives a list of all students in the system (ADMIN)
@@ -94,3 +121,5 @@ Few Examples: Each example API preceeded by "http://localhost:8080"
 /transaction/all--> gives a list of all transactions in the system (ADMIN)
 
 /transaction/issueBook--> issues a book(STUDENT)
+
+
